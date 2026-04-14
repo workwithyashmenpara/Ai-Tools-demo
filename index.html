@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Tools Hub — Explore the Future of Intelligence</title>
+    <meta name="description"
+        content="Discover the best AI tools of 2025. Curated collection of AI-powered apps, models, and platforms for creators, developers, and businesses." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-grid"></div>
+    <div class="orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <span class="logo-icon">⬡</span>
+                <span class="logo-text">AI<span class="accent">Hub</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#models" class="nav-link">AI Models</a></li>
+                <li><a href="all-tools.html" class="nav-link nav-link-tools">🛠️ All Tools</a></li>
+                <li><a href="#featured" class="nav-link">Featured</a></li>
+                <li><a href="#trending" class="nav-link">Trending</a></li>
+                <li><a href="all-tools.html?cat=automation" class="nav-link nav-link-auto">⚙️ Automation</a></li>
+                <li><a href="all-tools.html?cat=agent" class="nav-link nav-link-agent">🦾 AI Agents</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-wrap">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search AI tools..." />
+                    <span class="search-icon">⌕</span>
+                </div>
+                <button class="btn-glow" onclick="scrollToTools()">Explore Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>2026's Most Powerful AI Tools</span>
+        </div>
+        <h1 class="hero-title">
+            The Future of <br />
+            <span class="gradient-text typing-text" id="typingText"></span>
+        </h1>
+        <p class="hero-sub">Explore 80+ curated AI tools across creativity, coding, writing, image generation,
+            automation &amp; agents.
+            Your single gateway to the AI universe.</p>
+        <div class="hero-cta">
+            <a class="btn-primary" href="all-tools.html">
+                <span>Explore All Tools</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+            <button class="btn-secondary"
+                onclick="document.getElementById('featured').scrollIntoView({behavior:'smooth'})">
+                View Featured
+            </button>
+        </div>
+        <div class="hero-stats">
+            <div class="stat"><span class="stat-num" data-target="80">0</span><span>+</span>
+                <div class="stat-label">AI Tools</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num" data-target="14">0</span><span></span>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num" data-target="2026">0</span><span></span>
+                <div class="stat-label">Updated</div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Marquee Banner -->
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>ChatGPT</span><span class="sep">✦</span>
+                <span>Midjourney</span><span class="sep">✦</span>
+                <span>Gemini</span><span class="sep">✦</span>
+                <span>Claude</span><span class="sep">✦</span>
+                <span>Runway ML</span><span class="sep">✦</span>
+                <span>AutoGPT</span><span class="sep">✦</span>
+                <span>n8n</span><span class="sep">✦</span>
+                <span>Make.com</span><span class="sep">✦</span>
+                <span>LangChain</span><span class="sep">✦</span>
+                <span>CrewAI</span><span class="sep">✦</span>
+                <span>Sora</span><span class="sep">✦</span>
+                <span>ElevenLabs</span><span class="sep">✦</span>
+                <span>Perplexity</span><span class="sep">✦</span>
+                <span>GitHub Copilot</span><span class="sep">✦</span>
+                <span>Notion AI</span><span class="sep">✦</span>
+                <span>Synthesia</span><span class="sep">✦</span>
+                <span>Devin AI</span><span class="sep">✦</span>
+                <span>BabyAGI</span><span class="sep">✦</span>
+                <span>ChatGPT</span><span class="sep">✦</span>
+                <span>Midjourney</span><span class="sep">✦</span>
+                <span>Gemini</span><span class="sep">✦</span>
+                <span>Claude</span><span class="sep">✦</span>
+                <span>AutoGPT</span><span class="sep">✦</span>
+                <span>n8n</span><span class="sep">✦</span>
+                <span>Make.com</span><span class="sep">✦</span>
+                <span>LangChain</span><span class="sep">✦</span>
+                <span>CrewAI</span><span class="sep">✦</span>
+                <span>Sora</span><span class="sep">✦</span>
+                <span>Devin AI</span><span class="sep">✦</span>
+                <span>BabyAGI</span><span class="sep">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top AI Models Section (6 preview) -->
+    <section class="section" id="models">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Top AI Models</div>
+                <h2>Most Powerful <span class="gradient-text">AI Models</span></h2>
+                <p>The world's leading language models &mdash; pick your AI companion</p>
+            </div>
+            <div class="tools-grid" id="modelsGrid"><!-- 6 model cards injected by JS --></div>
+            <div class="view-all-wrap">
+                <a href="all-tools.html" class="btn-view-all">
+                    <span>View All 80+ AI Tools</span>
+                    <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Quick Links -->
+    <section class="section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Browse by Category</div>
+                <h2>Find Tools by <span class="gradient-text">Category</span></h2>
+                <p>Jump straight to the tools you need &mdash; browse all 14 categories</p>
+            </div>
+            <div class="categories-grid">
+                <a href="all-tools.html?cat=all" class="cat-btn"><span class="cat-icon">&#x2B21;</span> All Tools</a>
+                <a href="all-tools.html?cat=llm" class="cat-btn"><span class="cat-icon">&#x1F9E0;</span> Language Models</a>
+                <a href="all-tools.html?cat=image" class="cat-btn"><span class="cat-icon">&#x1F3A8;</span> Image Generation</a>
+                <a href="all-tools.html?cat=video" class="cat-btn"><span class="cat-icon">&#x1F3AC;</span> Video AI</a>
+                <a href="all-tools.html?cat=code" class="cat-btn"><span class="cat-icon">&#x1F4BB;</span> Code AI</a>
+                <a href="all-tools.html?cat=audio" class="cat-btn"><span class="cat-icon">&#x1F3B5;</span> Audio &amp; Voice</a>
+                <a href="all-tools.html?cat=writing" class="cat-btn"><span class="cat-icon">&#x270D;&#xFE0F;</span> Writing</a>
+                <a href="all-tools.html?cat=productivity" class="cat-btn"><span class="cat-icon">&#x26A1;</span> Productivity</a>
+                <a href="all-tools.html?cat=search" class="cat-btn"><span class="cat-icon">&#x1F50D;</span> AI Search</a>
+                <a href="all-tools.html?cat=design" class="cat-btn"><span class="cat-icon">&#x1F58C;&#xFE0F;</span> Design</a>
+                <a href="all-tools.html?cat=avatar" class="cat-btn"><span class="cat-icon">&#x1F916;</span> Avatars &amp; Video</a>
+                <a href="all-tools.html?cat=research" class="cat-btn"><span class="cat-icon">&#x1F4CA;</span> Research</a>
+                <a href="all-tools.html?cat=automation" class="cat-btn"><span class="cat-icon">&#x2699;&#xFE0F;</span> AI Automation</a>
+                <a href="all-tools.html?cat=agent" class="cat-btn"><span class="cat-icon">&#x1F9BE;</span> AI Agents</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="section featured-section" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Editor's Pick</div>
+                <h2>Featured <span class="gradient-text">This Month</span></h2>
+                <p>The most impactful AI tools right now</p>
+            </div>
+            <div class="featured-grid" id="featuredGrid">
+                <!-- Featured cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="section" id="trending">
+        <div class="container">
+            <div class="section-header">
+                <div class="tag">Hot Right Now</div>
+                <h2>Trending <span class="gradient-text">AI Tools</span></h2>
+            </div>
+            <div class="trending-list" id="trendingList">
+                <!-- Trending items injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="nav-logo">
+                <span class="logo-icon">⬡</span>
+                <span class="logo-text">AI<span class="accent">Hub</span></span>
+            </div>
+            <p class="footer-note">Curated with ♥ · Updated regularly · All links are external</p>
+            <p class="footer-copy">© 2026 AIHub · The Future is Intelligent</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Homepage: render 6 top AI model preview cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const TOP_MODELS = AI_TOOLS.filter(t => t.cat === 'llm').slice(0, 6);
+            const grid = document.getElementById('modelsGrid');
+            TOP_MODELS.forEach((tool, i) => grid.appendChild(createToolCard(tool, i * 60)));
+        });
+    </script>
+</body>
+
+</html>
